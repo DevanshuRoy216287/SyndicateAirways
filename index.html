@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Syndicate Airways | Home</title>
+        <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="32x32" type="image/png">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="16x16" type="image/png">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+    
+        <div class="container">
+            <div class="content"></div>
+
+            <div class="overlay"></div>
+
+                <div id="header">
+
+                    <div class="circle-button" onclick="toggleSidebar()" title="Sidebar menu">
+                        <span class="menu-icon">&#9776;</span>
+                    </div>
+                    <div class="sidebar open" id="sidebar">
+                        <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+                        <div
+                            style="background-color: rgb(214, 214, 214); height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; padding-top: 3vh;">
+                            <div class="sidebar-content">
+
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-home-384 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-home-384.png" class="icon hover-icon">
+                                    Go to Home
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-ticket-64 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-ticket-64.png" class="icon hover-icon">
+                                    Book a Flight
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-edit-144.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-edit-144 (1).png" class="icon hover-icon">
+                                    Edit Bookings
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-clock-500.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-clock-150.png" class="icon hover-icon">
+                                    View Flight Status
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="#destinations">
+                                    <img src="resources/sidebar/icons8-location-52.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-location-52 (1).png" class="icon5 hover-icon">
+                                    Best Destinations
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-sign-in-96.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-sign-in-96 (1).png" class="icon5 hover-icon">
+                                    Sign In
+                                  </a>
+                                </div>
+                              
+                                <div class="instructions">
+                                  <center>
+                                    Your personal travel hub: book flights, manage trips, and stay updated. Fly smarter with Syndicate Airways.
+                                  </center>
+                                </div>
+                              
+                              </div>
+                            </div>
+                        </div>
+
+                    <div class="logo-container">
+                        <a href="index.html"><img class="logo" src="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png"></a>
+                    </div>
+
+                    <a href="index.html"><p class="logo-text">SYNDICATE AIRLINES</p></a>
+
+                    <a href="#book" style="text-decoration: none;"><p class="book" title="Book Flights">Book<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+                    <a href="sign-in.html" style="text-decoration: none;"><p class="manage" title="Manage and Edit your Flights">Manage<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+                    <a href="sign-in.html" style="text-decoration: none;"><p class="status" title="Check Status of your Flight">Status<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+                    <a href="#destinations" style="text-decoration: none;"><p class="destination" title="View destinations and Top picks" style="text-decoration: none;">Destinations<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+
+                    <a href="sign-in.html"><button id="Signin">Sign In</button></a>
+
+                </div>
+
+                <div class="side-line"></div>
+
+                <div id="book">
+                    <div class="typing-container">
+                      <span id="typed" class="typing-text"></span>
+                    </div>
+
+                    <div class="ticket-container">
+
+                          <div class="trip-options">
+                            <input type="radio" name="trip" id="oneway" checked>
+                            <label for="oneway" class="trip-label">One Way</label>
+                          
+                            <input type="radio" name="trip" id="roundtrip">
+                            <label for="roundtrip" class="trip-label">Round Trip</label>
+                          </div>
+                          
+
+                          <div class="grid1">
+                            <div class="input-block">
+                              <label for="from" class="label">From: (city name)</label>
+                              <button class="location-btn" onclick="useMyLocation('from')"><img class="location-btn-img" src="resources/sidebar/icons8-location-52 (1).png"> Use My Location</button>
+                              <input type="text" id="from" placeholder="Delhi" class="input_city" oninput="filterSuggestions(this)" onfocus="filterSuggestions(this)">
+                              <ul class="suggestions" id="from-suggestions"></ul>
+                              <img class="take-off-img" src="resources/icons8-airplane-100 (1).png">
+                            </div>
+                          </div>
+                          
+                          <div class="grid2">
+                            <div class="input-block">
+                              <label for="to" class="label">To: (city name)</label>
+                              <button class="location-btn" onclick="useMyLocation('to')"><img class="location-btn-img" src="resources/sidebar/icons8-location-52 (1).png"> Use My Location</button>
+                              <input type="text" id="to" placeholder="Going to?" class="input_city" oninput="filterSuggestions(this)" onfocus="filterSuggestions(this)">
+                              <ul class="suggestions" id="to-suggestions"></ul>
+                            </div>
+                            <img class="take-off-img" src="resources/icons8-airplane-100.png">
+                          </div>
+
+                          <div class="vertical-line"></div>
+
+                        <div class="grid3">
+                          <div class="input-block">
+                            <label class="label1">Departure</label>
+                            <input type="date" class="calender1">
+                          </div>
+                          <div class="input-block" id="returnDateBlock">
+                            <label class="label12">Return</label>
+                            <input type="date" class="calender2" id="returnDate">
+                          </div>                          
+                        </div>
+
+                        <div class="grid4">
+                            <label class="label15">Passengers</label>
+                            <div>
+                                <input type="text" id="passengerInput" placeholder="Number of Passengers" readonly>
+                                <div id="passengerPanel" class="passenger-panel">
+                                  <div class="passenger-row">
+                                    <label class="label2">Adults</label>
+                                    <input class="pass-input" type="number" id="adultCount" max="9" min="0" value="1">
+                                    <small>Age 12+</small>
+                                  </div>
+                                  <div class="passenger-row">
+                                    <label class="label2">Children</label>
+                                    <input class="pass-input" type="number" id="childCount" max="9" min="0" value="0">
+                                    <small>Age 2-11</small>
+                                  </div>
+                                  <div class="passenger-row">
+                                    <label class="label2">Senior Citizens</label>
+                                    <input class="pass-input" type="number" id="seniorCount" max="9" min="0" value="0">
+                                    <small>Age 60+</small>
+                                  </div>
+                                  <div class="passenger-row">
+                                    <label class="label2">Infants</label>
+                                    <input class="pass-input" type="number" id="infantCount" max="9" min="0" value="0">
+                                    <small>Below 2 yrs</small>
+                                  </div>
+                                </div>
+                              </div>
+
+                        <select class="currency-select-bro">
+                            <option class="currency-select-">₹ INR</option>
+                            <option value="USD">$ USD – US Dollar .......</p></option>
+                        </select>
+                        </div>
+
+                        <div class="travel-purpose">
+                            <label for="purpose" class="label-travel">I am travelling for:</label>
+                            <select id="purpose">
+                              <option disabled selected>Select reason</option>
+                              <option>Work</option>
+                              <option>Vacation</option>
+                              <option>Business</option>
+                              <option>Family</option>
+                              <option>Other</option>
+                            </select>
+                          </div>
+                    
+                        <div class="search-bar">
+                          <button class="search-btn" onclick="searchFlights()">Search</button>
+                        </div>
+                      </div>
+
+                      <div id="options">
+                          <div class="manage-sec">
+                            <p class="heading-sec">Want to Manage your pre-booked flights?</p>
+                            <p class="sub-heading-sec">Add flight meals, retrieve bookings, and more...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="status-sec">
+                            <p class="heading-sec">View your Flights real-time status now</p>
+                            <p class="sub-heading-sec">Get location tracking, time shift updates...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="destination-sec">
+                            <p class="heading-sec">View our top Picks and Destinations</p>
+                            <p class="sub-heading-sec">Selected just for you, our top Picks and...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="#destinations">Go Ahead!</a>
+                          </div>
+                      </div>
+
+                      <div id="Why-with-us?">
+
+                        <p class="main-heading-third">Why Fly with Us? <img src="resources/icons8-airplane-100 (1).png" class="ariplane"></p>
+
+                          <div class="reason-1">
+                              <p class="heading-third">On-Time Performance</p>
+                              <div class="grey-back1">
+                                <p class="sub-heading-third">We prioritize punctuality. With one of the highest on-time records, you’ll get where you’re going — on schedule.</p>
+                              </div>
+                          </div>
+
+                          <div class="reason-2">
+                              <p class="heading-third">Affordable Fares</p>
+                              <div class="grey-back1">
+                                <p class="sub-heading-third">Fly more for less. Our competitive pricing ensures you don’t have to compromise on comfort or cost.</p>
+                              </div>
+                          </div>
+
+                          <div class="reason-3">
+                              <p class="heading-third">Safe and Generous Baggage Allowance</p>
+                              <div class="grey-back2">
+                              <p class="sub-heading-third2">Pack more of what matters with our flexible and fair baggage policies. From check-in to arrival, our ground and handling teams follow strict safety protocols to ensure that your luggage travels securely and arrives intact.</p>
+                              </div>
+                          </div>
+
+                          <div class="reason-4">
+                              <p class="heading-third">Friendly Service</p>
+                              <div class="grey-back3">
+                              <p class="sub-heading-third3">Our professional crew is trained to provide personalized service, ensuring a pleasant journey from takeoff to touchdown.</p>
+                              </div>
+                          </div>
+
+                          <div class="reason-5">
+                              <p class="heading-third">Safety Standards</p>
+                              <div class="grey-back3">
+                              <p class="sub-heading-third3">We meet the highest global standards in safety and hygiene, so you can fly with peace of mind.</p>
+                              </div>
+                          </div>
+                      </div>
+                
+                </div>                  
+                  
+                <div id="destinations">
+
+                  <p class="main-heading-fourth">Top Destinations</p>
+
+                  <div class="carousel-container">
+                    <button class="carousel-btn left" onclick="scrollCarousel(-1)">
+                      <img src="resources/icons8-right-arrow-96.png" class="left-btn">
+                    </button>
+
+                    <div class="carousel" id="carousel">
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c1" title="Capital city, major hub, business, politics, tourism">
+                        <p class="carousel-label">DELHI</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c2" title="Financial capital, Bollywood, international gateway">
+                        <p class="carousel-label">MUMBAI</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c3" title="IT hub, startup capital, frequent business travel">
+                        <p class="carousel-label">BENGALURU</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c4" title="Tech city, historic sites, pharma industry">
+                        <p class="carousel-label">HYDERABAD</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c5" title="Business, port city, gateway to South India">
+                        <p class="carousel-label">CHENNAI</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c6" title="Major metro, cultural hub, northeast gateway">
+                        <p class="carousel-label">KOLKATA</p>
+                      </div>
+                      </a>
+                      <a href="#book" style="text-decoration: none;">
+                      <div class="carousel-item" id="c7" title="Top tourist spot, beaches, international tourism">
+                        <p class="carousel-label">GOA</p>
+                      </div>
+                      </a>
+                    </div>
+
+                    <button class="carousel-btn right" onclick="scrollCarousel(1)">
+                      <img src="resources/icons8-right-arrow-96.png" class="right-btn">
+                    </button>
+                  </div>
+
+                </div>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

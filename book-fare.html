@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Syndicate Airways | Book</title>
+        <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="32x32" type="image/png">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="16x16" type="image/png">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="book-fare.css">
+
+    </head>
+
+    <body>
+    
+        <div class="container">
+            <div class="content"></div>
+
+            <div class="overlay"></div>
+
+                <div id="header">
+
+                    <div class="circle-button" onclick="toggleSidebar()" title="Sidebar menu">
+                        <span class="menu-icon">&#9776;</span>
+                    </div>
+                    <div class="sidebar open" id="sidebar">
+                        <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+                        <div
+                            style="background-color: rgb(214, 214, 214); height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; padding-top: 3vh;">
+                            <div class="sidebar-content">
+
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-home-384 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-home-384.png" class="icon hover-icon">
+                                    Go to Home
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-ticket-64 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-ticket-64.png" class="icon hover-icon">
+                                    Book a Flight
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-edit-144.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-edit-144 (1).png" class="icon hover-icon">
+                                    Edit Bookings
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-clock-500.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-clock-150.png" class="icon hover-icon">
+                                    View Flight Status
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-location-52.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-location-52 (1).png" class="icon5 hover-icon">
+                                    Best Destinations
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-sign-in-96.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-sign-in-96 (1).png" class="icon5 hover-icon">
+                                    Sign In
+                                  </a>
+                                </div>
+                              
+                                <div class="instructions">
+                                  <center>
+                                    Your personal travel hub: book flights, manage trips, and stay updated. Fly smarter with Syndicate Airways.
+                                  </center>
+                                </div>
+                              
+                              </div>
+                            </div>
+                        </div>
+
+                    <div class="logo-container">
+                        <a href="index.html"><img class="logo" src="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png"></a>
+                    </div>
+
+                    <a href="index.html"><p class="logo-text">SYNDICATE AIRLINES</p></a>
+
+                    <p onclick="Book(1)" class="book" title="Book Flights">Book<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <p onclick="Manage(1)" class="manage" title="Manage and Edit your Flights">Manage<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <p onclick="Status(1)" class="status" title="Check Status of your Flight">Status<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <a href="index.html"><p class="destination" title="View destinations and Top picks">Destinations<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+
+                    <a href="sign-in.html"><button id="Signin">Sign In</button></a>
+
+                </div>
+
+                <div class="side-line"></div>
+
+                    <div id="options">
+                          <div class="manage-sec">
+                            <p class="heading-sec">Want to Manage your pre-booked flights?</p>
+                            <p class="sub-heading-sec">Add flight meals, retrieve bookings, and more...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="status-sec">
+                            <p class="heading-sec">View your Flights real-time status now</p>
+                            <p class="sub-heading-sec">Get location tracking, time shift updates...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="destination-sec">
+                            <p class="heading-sec">View our top Picks and Destinations</p>
+                            <p class="sub-heading-sec">Selected just for you, our top Picks and...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="index.html">Go Ahead!</a>
+                          </div>
+                      </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-step active" id="step1Label">Choose Seats</div>
+                    <div class="progress-step" id="step2Label">Add Meals</div>
+                </div>
+
+                <div id="step1" class="step-content active">
+                    <div class="seats-container" id="seatsContainer"></div>
+                    <div class="info" id="infoText">Select seats for your passengers</div>   
+                    <button id="confirmBtn">Confirm Seats</button>  
+                </div>
+
+                <div id="step2" class="step-content">
+                    <h2 class="meal-heading">Add a Meal</h2>
+                    <p class="meal-text">Select meals for your passengers (Max: <span id="passengerCountSpan"></span> total)</p>
+
+                    <div class="meal-container">
+                        <div class="meal-box" id="m1">
+                        <img class="image-duh" src="resources/meal/veg-sandwich.png">
+                        </div>
+                        <h3 class="meal-subheading1">Veg Sandwich</h3>
+                        <input type="number" id="vegMeal" value="0" min="0" oninput="updateMealTotal()" />
+                        <div class="meal-box" id="m2">
+                        <img class="image-duh" src="resources/meal/non-veg_sandwich.png">
+                        </div>
+                        <h3 class="meal-subheading2">Non-Veg Sandwich</h3>
+                        <input type="number" id="nonVegMeal" value="0" min="0" oninput="updateMealTotal()" />
+                        <div class="meal-box" id="m3">
+                        <img class="image-duh" src="resources/meal/veg-pulao.png">
+                        </div>
+                        <h3 class="meal-subheading3">Veg Pulao</h3>
+                        <input type="number" id="specialMeal" value="0" min="0" oninput="updateMealTotal()" />
+                    </div>
+
+                    <p id="mealError" style="color: red; display: none;">Total meals cannot exceed passenger count.</p>
+
+
+                    <button class="continue-btn" onclick="submitMeals()">Finish Booking</button>
+                </div>
+
+                </div>
+
+        <script src="book-fare.js"></script>
+
+    </body>
+
+</html>

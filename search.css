@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+.m-plus-rounded-1c-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    height: 150vh;
+    background-color: rgb(247, 247, 247);
+    font-family: 'Montserrat';
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 270vh;
+    background-color: rgb(247, 247, 247);
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 6.5vw;
+    width: 93.5vw;
+    height: 100vh;
+    background-image: url('resources/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 6.5vw;
+    width: 93.5vw;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.6);
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12.8vh;
+    background-color: rgb(247, 247, 247);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+
+}
+
+#header.scrolled {
+    background-color: rgba(247, 247, 247, 0.9);
+    z-index: 1000;
+}
+
+
+.circle-button {
+    width: 3.2vw;
+    height: 3.2vw;
+    background-color: #2563ff;
+    border-radius: 0.8vw;
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    border: 0.6vh solid #2563ff;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 0.1vw rgb(227, 227, 227);
+    transition: transform 0.25s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.circle-button:hover {
+    transform: scale(1.05);
+    background-color: #084cfc;
+    border: 0.6vh solid #084cfc;
+}
+
+.menu-icon {
+    font-size: 1.8vw;
+    padding-bottom: 0.4vh;
+    color: white;
+}
+
+.sidebar {
+    height: 87.2vh;
+    width: 22.5vw;
+    position: fixed;
+    bottom: 0;
+    left: -22.5vw;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    overflow-y: hidden;
+    transition: width 0.8s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    animation: slideFromLeft 0.2s ease-out forwards;
+}
+
+.sidebar.closing {
+    animation: slideToLeft 0.2s ease-in forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -22.5vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        left: 0vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: -22.5vw;
+        opacity: 1;
+    }
+}
+
+
+.sidebar-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5vh;
+    padding-top: 2vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    font-size: 2.5vh;
+    margin: 5px 0;
+    transition: background-color 0.3s, transform 0.25s ease-in-out;
+    z-index: 3;
+}
+
+.sidebar-content a:hover {
+    background-color: #2563ff;
+    color: white;
+    transform: scale(1.02);
+}
+
+.default-icon {
+    display: inline-block;
+}
+
+.hover-icon {
+    display: none;
+}
+
+.page-link:hover .default-icon {
+    display: none;
+}
+
+.page-link:hover .hover-icon {
+    display: inline-block;
+}
+
+.icon {
+    position: absolute;
+    left: 1.5vw;
+    width: 3.8vh;
+    height: 3.8vh;
+}
+
+.icon5 {
+    position: absolute;
+    left: 1.3vw;
+    width: 4.7vh !important;
+    height: 4.7vh !important;
+}
+
+.page-link {
+    padding-bottom: 0.3vh;
+    margin-bottom: 1.6vh;
+}
+
+
+.instructions {
+    position: absolute;
+    width: 19.5vw;
+    font-size: 2.25vh;
+    color: #707070;
+    margin-left: 1vh;
+    bottom: 4vh;
+}
+
+.sidebartitle {
+    font-size: 3vh;
+    font-weight: normal;
+    padding-left: 2vw;
+    margin-top: 4vh;
+    margin-bottom: 3.8vh;
+    color: black;
+}
+
+.logo-container {
+    position: absolute;
+    top: 1.5vh;
+    left: 20vh;
+    width: 8vh;
+    height: 8vh;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.logo:hover {
+    transform: scale(1.06);
+}
+
+.logo-text {
+    position: absolute;
+    top: 0.5vh;
+    left: 30vh;
+    font-size: 3vh;
+    color: #288ce4;
+    z-index: 4;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-shadow: 0px 0px 15px 10px #000000;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.logo-text:hover {
+    transform: scale(1.02);
+}
+
+.book {
+    position: absolute;
+    top: 1vh;
+    left: 34vw;
+    font-size: 2.5vh;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.book:hover {
+    color: #303030;
+    transform: scale(1.04);
+}
+
+.down-arrow {
+    position: relative;
+    width: 3vh;
+    height: 3vh;
+    top: 0.7vh;
+    left: 0.7vh;
+}
+
+.manage {
+    position: absolute;
+    top: 1vh;
+    left: 44vw;
+    font-size: 2.5vh;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.manage:hover {
+    color: #303030;
+    transform: scale(1.04);
+}
+
+.status {
+    position: absolute;
+    top: 1vh;
+    left: 55.5vw;
+    font-size: 2.5vh;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.status:hover {
+    color: #303030;
+    transform: scale(1.04);
+}
+
+.destination {
+    position: absolute;
+    top: 1vh;
+    left: 66.5vw;
+    font-size: 2.5vh;
+    z-index: 4;
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.destination:hover {
+    color: #303030;
+    transform: scale(1.04);
+}
+
+#Signin {
+    position: absolute;
+    top: 3.3vh;
+    right: 6vw;
+    width: 12vw;
+    height: 2.5vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    ;
+    background-color: #2563ff;
+    color: white;
+    border: none;
+    border-radius: 1.7vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+#Signin:hover {
+    background-color: #084cfc;
+    transform: scale(1.02);
+}
+
+.side-line {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 87.2vh;
+    width: 6.5vw;
+    background-color: rgb(247, 247, 247);
+    background-image: radial-gradient(circle, #8c8c8c 10%, transparent 10%);
+    background-size: 18px 18px;
+    z-index: 3;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.ticket-container {
+    position: absolute;
+    top: 21vh;
+    left: 11vw;
+    z-index: 3;
+    overflow: hidden;
+    width: 82vw;
+    height: 34vh;
+    background-color: rgba(242, 242, 242, 0.7);
+    border-radius: 5vh;
+    transition: transform 0.25s ease-in-out;
+}
+
+.trip-type-contain {
+    position: absolute;
+    top: 24vh;
+    left: 14vw;
+    width: 15vw;
+    height: 4vw;
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3.5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 4vh;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.trip-type-contain:hover {
+    background-color: #288ce4;
+    color: white;
+    transform: scale(1.02);
+    border: 0.3vh solid white;
+}
+
+.input-block1 {
+    position: absolute;
+    top: 35vh;
+    left: 14vw;
+    width: 16vw;
+    height: 8vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border-radius: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block1:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+.input-block2 {
+    position: absolute;
+    top: 35vh;
+    left: 31vw;
+    width: 16vw;
+    height: 8vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block2:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+.input-block3 {
+    position: absolute;
+    top: 35vh;
+    left: 48vw;
+    width: 20vw;
+    height: 3.5vw;
+    font-size: 2.4vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block3:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+.input-block4 {
+    position: absolute;
+    top: 44vh;
+    left: 48vw;
+    width: 20vw;
+    height: 3.5vw;
+    font-size: 2.4vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block4:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+.input-block5 {
+    position: absolute;
+    top: 35vh;
+    left: 69vw;
+    width: 20vw;
+    height: 8vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3.5vh;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block5:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+.input-block6 {
+    position: absolute;
+    top: 24vh;
+    left: 32vw;
+    width: 14vw;
+    height: 4vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 3.5vh;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input-block6:hover {
+    border: 0.3vh solid #288ce4;
+}
+
+
+.label1 {
+    position: absolute;
+    top: 3vh;
+    font-weight: bold;
+}
+
+#passengerDisplay {
+    position: absolute;
+    top: 8vh;
+    width: 16vw;
+    left: 9vh;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.search-btn {
+    position: absolute;
+    top: 24vh;
+    left: 73vw;
+    width: 15vw;
+    height: 4vw;
+    font-size: 2.7vh;
+    font-family: 'Montserrat';
+    background-color: #2563ff;
+    color: white;
+    border: none;
+    border-radius: 2.5vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+    z-index: 3;
+}
+
+.search-btn:hover {
+    background-color: #084cfc;
+    transform: scale(1.02);
+
+}
+
+.manage-sec {
+    position: absolute;
+    top: 64vh;
+    left: 14.5vw;
+    width: 22vw;
+    height: 18vh;
+    background-color: white;
+    border-radius: 3.5vh;
+    z-index: 2;
+    transition: transform 0.25s ease-in-out;
+}
+
+.manage-sec:hover {
+    transform: scale(1.02);
+}
+
+.heading-sec {
+    color: black;
+    position: absolute;
+    top: 0vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.5vh;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.sub-heading-sec {
+    color: #5a5a5a;
+    position: absolute;
+    top: 7.5vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.2vh;
+    line-height: 3vh;
+    font-family: 'Montserrat';
+    flex: 1;
+}
+
+.sign-in-btn-sec {
+    position: absolute;
+    top: 14vh;
+    right: -2vw;
+    width: 6.5vw;
+    height: 3vw;
+    font-size: 2.3vh;
+    font-family: 'Montserrat';
+    ;
+    background-color: #2563ff;
+    color: white;
+    border: none;
+    border-radius: 3vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.sign-in-btn-sec:hover {
+    background-color: #084cfc;
+    transform: scale(1.02);
+
+}
+
+.status-sec {
+    position: absolute;
+    top: 64vh;
+    left: 40.5vw;
+    width: 22vw;
+    height: 18vh;
+    background-color: white;
+    border-radius: 3.5vh;
+    z-index:2;
+    transition: transform 0.25s ease-in-out;
+}
+
+.status-sec:hover {
+    transform: scale(1.02);
+}
+
+.destination-sec {
+    position: absolute;
+    top: 64vh;
+    left: 66.5vw;
+    width: 22vw;
+    height: 18vh;
+    background-color: white;
+    border-radius: 3.5vh;
+    z-index: 2;
+    transition: transform 0.25s ease-in-out;
+}
+
+.destination-sec:hover {
+    transform: scale(1.02);
+}
+
+#flightResults {
+    position: absolute;
+    top: 90vh;
+    left: 12vw;
+    width: 80vw;
+    height: 100vw;
+    z-index: 1;
+}
+
+.flight-card {
+    position: relative;
+    top: 5vw;
+    left: 2vw;
+    width: 76vw;
+    height: 20vh;
+    background-color: white;
+    border-radius: 3.5vh;
+    z-index: 3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 5vh;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.flight-card:hover {
+    transform: scale(1.005);
+}
+
+.flight-card.expanded {
+  height: 70vh;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.airplane-card {
+    position: absolute;
+    top: 5.5vh;
+    left: 4vw;
+    width: 4vw;
+    height: 4vw;
+}
+
+.flight-route {
+    position: absolute;
+    top: 5.5vh;
+    font-size: 2.8vh;
+}
+
+.from {
+    position: absolute;
+    left: 15vw !important;
+}
+
+.arrow {
+    position: absolute;
+    top: -0.2vh !important;
+    left: 21vw ;
+}
+
+.to {
+    position: absolute;
+    left: 25vw !important;
+}
+
+.flight-time-date {
+    position: absolute;
+    top: 6vh;
+    left: 45vw;
+    font-size: 2.8vh;
+}
+
+.flight-stops {
+    position: absolute;
+    top: 11vh;
+    left: 46.5vw;
+    font-size: 2.5vh;
+}
+
+.flight-price {
+    position: absolute;
+    top: 5vh;
+    left: 65vw;
+    font-size: 4vh;
+    color: #288ce4;
+    font-weight: bold;
+}
+
+.flight-price:hover {
+    color: #084cfc;
+}
+
+.discount-text {
+    position: absolute;
+    top: 11vh;
+    left: 64.5vw;
+    font-size: 2.5vh;
+}
+
+.vertical-line1 {
+    position: absolute;
+    top: 6vh;
+    left: 38vw;
+    width: 2px;
+    height: 4vw;
+    background-color: rgb(227, 227, 227);
+    border-radius: 1vh;
+}
+
+.vertical-line2 {
+    position: absolute;
+    top: 6vh;
+    left: 60vw;
+    width: 2px;
+    height: 4vw;
+    background-color: rgb(227, 227, 227);
+    border-radius: 1vh;
+}
+
+.vertical-line3 {
+    position: absolute;
+    top: 6vh;
+    left: 10vw;
+    width: 2px;
+    height: 4vw;
+    background-color: rgb(227, 227, 227);
+    border-radius: 1vh;
+}
+
+.extra-details {
+  width: 100%;
+  background-color: white;
+  border-bottom-left-radius: 3.5vh;
+  border-bottom-right-radius: 3.5vh;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+  margin-top: 2vh;
+}
+
+.extra-details.open {
+  max-height: 500px;
+}
+
+.area1 {
+    position: absolute;
+    top: 21vh;
+    left: 3vw;
+    width: 18vw;
+    height: 46vh;
+    background-color: rgb(245, 245, 245);
+    border-radius: 3.5vh;
+    z-index: 2;
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+.area1:hover {
+    transform: scale(1.01);
+}
+
+.area2 {
+    position: absolute;
+    top: 21vh;
+    left: 22vw;
+    width: 25vw;
+    height: 46vh;
+    background-color: rgb(245, 245, 245);
+    border-radius: 3.5vh;
+    z-index: 2;
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+.area2:hover {
+    transform: scale(1.015);
+}
+
+.area3 {
+    position: absolute;
+    top: 21vh;
+    left: 48vw;
+    width: 25vw;
+    height: 46vh;
+    background-color: rgb(245, 245, 245);
+    border-radius: 3.5vh;
+    z-index: 2;
+    transition: transform 0.25s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5vh;
+}
+
+.area3:hover {
+    transform: scale(1.015);
+}
+
+.fare-type1 {
+    color: black;
+    position: absolute;
+    top: 2vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.4vh;
+    font-weight: bold;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.fare-type2 {
+    color: black;
+    position: absolute;
+    top: 12vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.4vh;
+    font-weight: bold;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.fare-type3 {
+    color: black;
+    position: absolute;
+    top: 22vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.4vh;
+    font-weight: bold;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.fare-type4 {
+    color: black;
+    position: absolute;
+    top: 34vh;
+    left: 4vh;
+    width: 19vw;
+    font-size: 2.4vh;
+    font-weight: bold;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.horizontal-line {
+    position: absolute;
+    left: 3.8vh;
+    width: 10vw;
+    height: 2px;
+    background-color: rgb(227, 227, 227);
+    border-radius: 2vh;
+}
+
+.horizontal-line1 {
+    position: absolute;
+    left: 3.8vh;
+    width: 18vw;
+    height: 2px;
+    background-color: rgb(227, 227, 227);
+    border-radius: 2vh;
+}
+
+#h1 {
+    top: 12vh;
+    height: 2.5px !important;
+}
+
+#h2 {
+    top: 23vh;
+}
+
+#h3 {
+    top: 34vh;
+}
+
+.flight-price2 {
+    position: absolute;
+    top: -1vh;
+    left: 4vh;
+    font-size: 4vh;
+    color: #288ce4;
+    font-weight: bold;
+}
+
+.flight-price2:hover {
+    color: #084cfc;
+}
+
+.fare-name {
+    color: #5a5a5a;
+    position: absolute;
+    top: 5.7vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    line-height: 3vh;
+    font-family: 'Montserrat';
+    flex: 1;
+}
+
+.baggage1 {
+    color: black;
+    position: absolute;
+    top: 11vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.baggage2 {
+    color: black;
+    position: absolute;
+    top: 15.5vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.change {
+    color: black;
+    position: absolute;
+    top: 22vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.cancel {
+    color: black;
+    position: absolute;
+    top: 26.5vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.meal {
+    color: black;
+    position: absolute;
+    top: 33vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.seat {
+    color: black;
+    position: absolute;
+    top: 37vh;
+    left: 4.5vh;
+    width: 19vw;
+    font-size: 2.3vh;
+    font-weight: 450;
+    line-height: 3.3vh;
+    font-family: 'Montserrat';
+}
+
+.bookBtn {
+    position: absolute;
+    top: 37vh;
+    left: 14vw;
+    width: 10vw;
+    height: 3.5vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: #2563ff;
+    color: white;
+    border: none;
+    border-radius: 3vh;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.bookBtn:hover {
+    background-color: #084cfc;
+    transform: scale(1.02);
+}
+
+#sortButton {
+    position: absolute;
+    top: 90vh;
+    right: 10vw;
+    width: 3.5vw;
+    height: 3.5vw;
+    font-size: 2.5vh;
+    font-family: 'Montserrat';
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+#sortButton:hover {
+    background-color: rgb(247, 247, 247);
+    transform: scale(1.02);
+}
+
+.filter {
+    width: 1.8vw;
+    height: 1.8vw;
+}
+
+.sort-options {
+  position: absolute;
+  top: 98vh;
+  right: 14vh;
+  width: 10.5vw;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 1.5vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  font-size: 2.35vh;
+  font-family: 'Montserrat';
+}
+
+.sort-options div {
+  padding: 12px;
+  cursor: pointer;
+}
+
+.sort-options div:hover {
+    background-color: #288ce4 !important;
+    color: white !important;
+    border-radius: 1.5vh;
+}
+
+.sort-options div:hover {
+  background-color: #f0f0f0;
+}
+
+.hidden {
+  display: none;
+}

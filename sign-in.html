@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Syndicate Airways | Sign In</title>
+        <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="32x32" type="image/png">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="16x16" type="image/png">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="sign-in.css">
+
+    </head>
+
+    <body>
+    
+        <div class="container">
+            <div class="content"></div>
+
+            <div class="overlay"></div>
+
+                <div id="header">
+
+                    <div class="circle-button" onclick="toggleSidebar()" title="Sidebar menu">
+                        <span class="menu-icon">&#9776;</span>
+                    </div>
+                    <div class="sidebar open" id="sidebar">
+                        <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+                        <div
+                            style="background-color: rgb(214, 214, 214); height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; padding-top: 3vh;">
+                            <div class="sidebar-content">
+
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-home-384 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-home-384.png" class="icon hover-icon">
+                                    Go to Home
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-ticket-64 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-ticket-64.png" class="icon hover-icon">
+                                    Book a Flight
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-edit-144.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-edit-144 (1).png" class="icon hover-icon">
+                                    Edit Bookings
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-clock-500.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-clock-150.png" class="icon hover-icon">
+                                    View Flight Status
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-location-52.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-location-52 (1).png" class="icon5 hover-icon">
+                                    Best Destinations
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-sign-in-96.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-sign-in-96 (1).png" class="icon5 hover-icon">
+                                    Sign In
+                                  </a>
+                                </div>
+                              
+                                <div class="instructions">
+                                  <center>
+                                    Your personal travel hub: book flights, manage trips, and stay updated. Fly smarter with Syndicate Airways.
+                                  </center>
+                                </div>
+                              
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="side-line"></div>
+
+                        <img class="logo-img" src="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png">
+
+                        <p class="sign_in">Sign-in to Syndicate</p>
+
+                        <div class="signin-box">
+                            <br><br>
+                            <div class="signup">
+                                <form>
+                                <center>
+                                <p class="Label1">Username:</p><br>
+                                </center>
+                                <div class="input-group1">
+                                    <input type="email" id="username" name="email" placeholder="Username:" class="email" autocomplete="off" required>
+                                </div>
+
+                                <center>
+                                    <p class="Label2">Password:</p><br>
+                                </center>
+                        
+                                <div class="input-group2">
+                                    <input type="password" id="password" name="password" placeholder="Password:" class="password" autocomplete="off" required>
+                                </div>
+
+                                <br>
+                                
+                                <div class="submit-group" style="display: flex; align-items: center; justify-content: center; padding-top: 2vh;">
+                                    <button class="submit-button" type="button" id="submitBtn">
+                                    Submit
+                                    </button>
+                                </div>
+                                </form>
+                                <br>
+                            </div>
+                        </div>
+                    
+                </div>
+
+        <script src="sign-in.js"></script>
+
+    </body>
+
+</html>

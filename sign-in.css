@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+.m-plus-rounded-1c-regular {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    font-family: 'Montserrat';
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.content {
+    position: fixed;
+    top: 0;
+    left: 6.5vw;
+    width: 93.5vw;
+    height: 100vh;
+    background-image: url('resources/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 6.5vw;
+    width: 93.5vw;
+    height: 100%;
+    background-color: rgba(242, 242, 242, 0.6);
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.circle-button {
+    width: 3.2vw;
+    height: 3.2vw;
+    background-color: #2563ff;
+    border-radius: 0.8vw;
+    position: fixed;
+    top: 2vh;
+    left: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    border: 0.6vh solid #2563ff;
+    box-sizing: border-box;
+    box-shadow: inset 0 0 0 0.1vw rgb(227, 227, 227);
+    transition: transform 0.25s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.circle-button:hover {
+    transform: scale(1.05);
+    background-color: #084cfc;
+    border: 0.6vh solid #084cfc;
+}
+
+.menu-icon {
+    font-size: 1.8vw;
+    padding-bottom: 0.4vh;
+    color: white;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 22.5vw;
+    position: fixed;
+    bottom: 0;
+    left: -22.5vw;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    overflow-y: hidden;
+    transition: width 0.8s ease;
+    z-index: 3;
+}
+
+.sidebar.open {
+    animation: slideFromLeft 0.2s ease-out forwards;
+}
+
+.sidebar.closing {
+    animation: slideToLeft 0.2s ease-in forwards;
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -22.5vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0vw;
+        opacity: 1;
+    }
+}
+
+@keyframes slideToLeft {
+    0% {
+        left: 0vw;
+        opacity: 1;
+    }
+
+    100% {
+        left: -22.5vw;
+        opacity: 1;
+    }
+}
+
+
+.sidebar-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1.5vh;
+    padding-top: 2vh;
+    border-radius: 1vh;
+    text-decoration: none;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    font-size: 2.5vh;
+    margin: 5px 0;
+    transition: background-color 0.3s, transform 0.25s ease-in-out;
+    z-index: 3;
+}
+
+.sidebar-content a:hover {
+    background-color: #2563ff;
+    color: white;
+    transform: scale(1.02);
+}
+
+.default-icon {
+    display: inline-block;
+}
+
+.hover-icon {
+    display: none;
+}
+
+.page-link:hover .default-icon {
+    display: none;
+}
+
+.page-link:hover .hover-icon {
+    display: inline-block;
+}
+
+.icon {
+    position: absolute;
+    left: 1.5vw;
+    width: 3.8vh;
+    height: 3.8vh;
+}
+
+.icon5 {
+    position: absolute;
+    left: 1.3vw;
+    width: 4.7vh !important;
+    height: 4.7vh !important;
+}
+
+.page-link {
+    padding-bottom: 0.3vh;
+    margin-bottom: 1.6vh;
+}
+
+
+.instructions {
+    position: absolute;
+    width: 19.5vw;
+    font-size: 2.25vh;
+    color: #707070;
+    margin-left: 1vh;
+    bottom: 4vh;
+}
+
+.sidebartitle {
+    font-size: 3vh;
+    font-weight: normal;
+    padding-left: 5.5vw;
+    margin-top: 4vh;
+    margin-bottom: 3.8vh;
+    color: black;
+}
+
+.side-line {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 6.5vw;
+    background-color: rgb(247, 247, 247);
+    background-image: radial-gradient(circle, #8c8c8c 10%, transparent 10%);
+    background-size: 18px 18px;
+    z-index: 2;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.logo-img {
+    position: absolute;
+    top: 8vh;
+    left: 46vw;
+    width: 10vw;
+    height: 10vw;
+    z-index: 3;
+}
+
+.sign_in {
+    position: absolute;
+    top: 25vh;
+    left: 42.5vw;
+    color: black !important;
+    font-size: 1.8vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.05s ease, box-shadow 0.1s ease;
+    z-index: 3;
+}
+
+.signin-box {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 39vh;
+    left: 39vw;
+    width: 27vw;
+    height: 45vh;
+    background-color: white;
+    border: solid 1.5px rgb(203, 203, 203);
+    border-radius: 3.5vh;
+    padding-bottom: 1.2vw;
+    z-index: 3;
+}
+
+.input-group1 {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.input-group2 {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 0;
+    margin: 0;
+}
+
+.email {
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center; 
+    justify-content: center; 
+    border: solid 1.5px rgb(203, 203, 203);
+    border-radius: 3.75px;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    font-size: 1.1vw;
+    width: 20vw;
+    padding: 4.5px 5.5px;
+    top: 1.7vw;
+}
+
+.email:hover {
+    background-color: rgb(227, 227, 227);
+}
+
+.password {
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center; 
+    justify-content: center; 
+    border: solid 1.5px rgb(203, 203, 203);
+    border-radius: 3.75px;
+    background-color: rgb(247, 247, 247);
+    color: black;
+    font-size: 1.1vw;
+    width: 20vw;
+    padding: 4.5px 5.5px;
+    top: 6.2vw;
+}
+
+.password:hover {
+    background-color: rgb(227, 227, 227);
+}
+
+.Label1 {
+    position: absolute;
+    color: black !important;
+    font-size: 1.2vw;
+    right: 16.9vw;
+    top: 2vw;
+}
+
+.Label2 {
+    position: absolute;
+    color: black !important;
+    font-size: 1.2vw;
+    right: 17.4vw;
+    top: 8vw;
+}
+
+.submit-button {
+    position: absolute;
+    top: 16vw;
+    width: 20vw; 
+    padding: 1vw;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    background-color: #2563ff; border-radius: 0.5vw; 
+    border: solid 1px rgb(203, 203, 203); 
+    font-size: 2.5vh; 
+    color: white; 
+    cursor: pointer;
+    transition: transform 0.05s ease, box-shadow 0.1s ease;
+}
+
+.submit-button:hover {
+    background-color: #084cfc;
+    border: solid 1px #084cfc; 
+    transform: scale(1.01);
+}

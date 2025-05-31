@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Syndicate Airways | Search</title>
+        <link rel="icon" href="resources/profile_circular.png" type="image/x-icon">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="32x32" type="image/png">
+        <link rel="icon" href="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png" sizes="16x16" type="image/png">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="search.css">
+
+    </head>
+
+    <body>
+    
+        <div class="container">
+            <div class="content"></div>
+
+            <div class="overlay"></div>
+
+                <div id="header">
+
+                    <div class="circle-button" onclick="toggleSidebar()" title="Sidebar menu">
+                        <span class="menu-icon">&#9776;</span>
+                    </div>
+                    <div class="sidebar open" id="sidebar">
+                        <h3 class="sidebartitle" id="sidebartitle">Sidebar Menu</h3>
+                        <div
+                            style="background-color: rgb(214, 214, 214); height: 100vh; border-top-left-radius: 2vh; border-top-right-radius: 2vh; padding: 2vh; padding-top: 3vh;">
+                            <div class="sidebar-content">
+
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-home-384 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-home-384.png" class="icon hover-icon">
+                                    Go to Home
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-ticket-64 (1).png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-ticket-64.png" class="icon hover-icon">
+                                    Book a Flight
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-edit-144.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-edit-144 (1).png" class="icon hover-icon">
+                                    Edit Bookings
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-clock-500.png" class="icon default-icon">
+                                    <img src="resources/sidebar/icons8-clock-150.png" class="icon hover-icon">
+                                    View Flight Status
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="index.html">
+                                    <img src="resources/sidebar/icons8-location-52.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-location-52 (1).png" class="icon5 hover-icon">
+                                    Best Destinations
+                                  </a>
+                                </div>
+                              
+                                <div class="page-link">
+                                  <a href="sign-in.html">
+                                    <img src="resources/sidebar/icons8-sign-in-96.png" class="icon5 default-icon">
+                                    <img src="resources/sidebar/icons8-sign-in-96 (1).png" class="icon5 hover-icon">
+                                    Sign In
+                                  </a>
+                                </div>
+                              
+                                <div class="instructions">
+                                  <center>
+                                    Your personal travel hub: book flights, manage trips, and stay updated. Fly smarter with Syndicate Airways.
+                                  </center>
+                                </div>
+                              
+                              </div>
+                            </div>
+                        </div>
+
+                    <div class="logo-container">
+                        <a href="index.html"><img class="logo" src="resources/favicon_io/ChatGPT Image May 23, 2025, 05_07_46 PM(1)(1)(1)(1).png"></a>
+                    </div>
+
+                    <a href="index.html"><p class="logo-text">SYNDICATE AIRLINES</p></a>
+
+                    <p onclick="Book(1)" class="book" title="Book Flights">Book<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <p onclick="Manage(1)" class="manage" title="Manage and Edit your Flights">Manage<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <p onclick="Status(1)" class="status" title="Check Status of your Flight">Status<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p>
+                    <a href="index.html"><p class="destination" title="View destinations and Top picks">Destinations<img src="resources/icons8-down-arrow-96.png" class="down-arrow"></p></a>
+
+                    <a href="sign-in.html"><button id="Signin">Sign In</button></a>
+
+                </div>
+
+                <div class="side-line"></div>
+
+                    <div class="ticket-container"></div>
+
+                        <div class="trip-type-contain">
+                          <p>Trip Type: <span id="tripTypeDisplay"></span></p>
+                        </div>
+
+                            <div class="input-block1">
+                              <p><label for="from" class="label">From: </label> <span id="fromDisplay"></span></p>
+                            </div>
+                          
+                            <div class="input-block2">
+                              <p><label for="to" class="label">To:</label> <span id="toDisplay"></span></p>
+                            </div>
+
+                          <div class="input-block3">
+                            <p><label class="label">Departure Date:</label> <span id="departureDisplay"></span></p>
+                          </div>
+
+                          <div class="input-block4" id="returnDateBlock">
+                            <p><label class="label">Return Date:</label> <span id="returnDisplay"></span></p>
+                          </div>                          
+
+                        <div class="input-block5">
+                            <label class="label1">Passengers:</label>
+                            <p><br> <span id="passengerDisplay"></span></p>
+                        </div>
+
+                        <div class="input-block6">
+                            <p><b>Currency:</b> <span id="currencyDisplay"></span></p>
+                        </div>
+
+                        <div class="search-bar">
+                          <button class="search-btn" id="changeBtn">Change</button>
+                        </div>
+                    </div>
+
+                      <div id="options">
+                          <div class="manage-sec">
+                            <p class="heading-sec">Want to Manage your pre-booked flights?</p>
+                            <p class="sub-heading-sec">Add flight meals, retrieve bookings, and more...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="status-sec">
+                            <p class="heading-sec">View your Flights real-time status now</p>
+                            <p class="sub-heading-sec">Get location tracking, time shift updates...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="sign-in.html">Sign In!</a>
+                          </div>
+
+                          <div class="destination-sec">
+                            <p class="heading-sec">View our top Picks and Destinations</p>
+                            <p class="sub-heading-sec">Selected just for you, our top Picks and...</p>
+                            <a class="sign-in-btn-sec" style="text-decoration: none;" href="index.html">Go Ahead!</a>
+                          </div>
+                      </div>
+
+
+                       <div class="sort-container">
+                          <button id="sortButton"><img src="resources/icons8-filter-96.png" class="filter"></button>
+                          <div id="sortOptions" class="sort-options hidden">
+                            <div data-sort="lowestPrice">Lowest Price</div>
+                            <div data-sort="earliest">Earliest Flights</div>
+                            <div data-sort="latest">Last Flights</div>
+                          </div>
+                        </div>
+
+                      <div id="flightResults">
+                      </div>
+                      <template id="flightCardTemplate">
+                        <div class="flight-card">
+                          <img src="resources/icons8-airplane-100 (1).png" class="airplane-card">
+                          <div class="vertical-line3"></div>
+                          <div class="flight-route">
+                            <p class="from">Delhi</p>
+                            <p class="arrow">➜</p>
+                            <p class="to">Bhopal</p>
+                          </div>
+                          <div class="vertical-line1"></div>
+                          <div class="flight-time-date">
+                            <span class="date">25-05-30</span> | <span class="time">9:30</span>
+                          </div>
+                          <div class="flight-stops">non-stop</div>
+                          <div class="vertical-line2"></div>
+                          <div class="flight-price">₹<span class="price">7729</span></div>
+                          <div class="discount-text">Filling Fast</div>
+
+      
+                          <div class="extra-details">
+                            <div class="area1">
+                              <p class="fare-type1">Fare Type</p>
+                              <div class="horizontal-line" id="h1"></div>
+                              <p class="fare-type2">Bag Allowance</p>
+                              <div class="horizontal-line" id="h2"></div>
+                              <p class="fare-type3">Cancellation/Change<br> fee</p>
+                              <div class="horizontal-line" id="h3"></div>
+                              <p class="fare-type4">Additional Services</p>
+                            </div>
+                            <div class="area2">
+                              <p class="flight-price2">₹<span class="price">7729</span></p>
+                              <p class="fare-name">Saver Fare (cost per person)</p>
+                              <div class="horizontal-line1" id="h1"></div>
+                              <p class="baggage1">7kg cabin baggage allowance</p>
+                              <p class="baggage2">15kg check-in baggage allowance</p>
+                              <div class="horizontal-line1" id="h2"></div>
+                              <p class="change">Change charges upto ₹1000</p>
+                              <p class="cancel">Cancellation charges upto ₹2000</p>
+                              <div class="horizontal-line1" id="h3"></div>
+                              <p class="meal">Free meal charges</p>
+                              <p class="seat">Free standard seat</p>
+                              <button class="bookBtn" data-fare="Saver">Book Fare</button>
+                            </div>
+                            <div class="area3">
+                              <p class="flight-price2">₹<span class="price2">8229</span></p>
+                              <p class="fare-name">Executive Fare (cost per person)</p>
+                              <div class="horizontal-line1" id="h1"></div>
+                              <p class="baggage1">8kg cabin baggage allowance</p>
+                              <p class="baggage2">16kg check-in baggage allowance</p>
+                              <div class="horizontal-line1" id="h2"></div>
+                              <p class="change">Change charges upto ₹500</p>
+                              <p class="cancel">Cancellation charges upto ₹1000</p>
+                              <div class="horizontal-line1" id="h3"></div>
+                              <p class="meal">Free meal charges</p>
+                              <p class="seat">Free executive seat</p>
+                              <button class="bookBtn" data-fare="Executive">Book Fare</button>
+                            </div>
+                        </div>
+                        </div>
+                      </template>
+
+                </div>
+
+        <script src="search.js"></script>
+
+    </body>
+
+</html>
